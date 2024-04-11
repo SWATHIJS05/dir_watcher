@@ -1,0 +1,43 @@
+#installations of the instances used
+1. MySQL 8
+2. Gin framework
+3. VSCode
+4. Postman
+5. go1.20.2 windows/amd64
+
+#steps
+1. Download the code with the same structure
+2. Open the MySQL 8 client command line in a terminal
+3. Open Postman
+4. Import the collection attached
+
+5. Open the dirWatcher directory
+6. Type the following command in the terminal
+ >go run main.go
+
+7. This will mount the routers(handlers for the API request)
+ >Note: If you have any firewall setting in the windows , give allow to the popup(It will ask permission to use localhost to serve as the client)
+
+8. Then open the postman 
+ >First run the GetDetails API 
+     >Response : nil
+ >Then start the task
+     >Go to the vs code terminal , it will show the logs
+ >Again run the GetDetails API
+     >Will shows the files in the folder
+ >Now, Run the stopTask API
+    >Task will be stopped , nothing will get updated in the MySql
+ >Now , Run ConfigureTask API
+ >Run StartTask API
+    >Task will be started again
+MySQL 
+ >Open the MySQL client CMD
+ >type password as "password"
+ >SHOW databases;
+ >USE "directory_watcher";
+ >SHOW tables
+ >SELECT * from files;
+
+Testcases are attached as the collections in this folder itself
+
+********CHANGE THE PATH VARIABLE ACCORDINGLY***************
